@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(21, 14, 61);    
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+}
+
+.weatherHeader {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 50px 40px 50px;
+    color: white;
+}
+
+label{
+    width: 100%;
+    display: block;
+}
+
+input {
+    margin: 15px 0;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 10px;
+}
+
+button {
+    height: 41px;
+    width: 77px;
+    background-color: #b8d5e9;
+    border: 2px solid #a0bff6;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+#weatherCards {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.weatherCard {
+    width: 320px;
+    height: 350px;
+    padding: 0 15px;
+    background-color: rgb(235, 231, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.mapDiv {
+    width: 50%;
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    position: fixed;
+    width: 600px;
+    height: 500px;
+}

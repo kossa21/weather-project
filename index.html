@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div id="weatherCards">
+        <div class="weatherHeader">
+            <h1>Current Weather</h1>
+        
+            <label for="cityName">Search by City Name in the cities below</label>
+            <input type="text" name="cityName" id="cityName" placeholder="City Name">
+            <button id="searchBtn">Search</button>
+            <button id="showAllBtn">Show All</button>
+        </div>
+    </div>
+    <div class="mapDiv">
+        <div id='map'></div>
+    </div>
+    
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia29zc2EyMSIsImEiOiJja2I3M2dpbTMwMXltMnN1czl4czhieTJxIn0.NEmfjKWRCMxJLVwvAJY9gQ';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-20, 20], // starting position [lng, lat]
+        zoom: 1 // starting zoom
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

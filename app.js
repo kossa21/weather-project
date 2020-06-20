@@ -52,6 +52,7 @@ const get = (latitude, longitude) => {
 
 
 const renderArray = arr => {
+    console.log("I entered renderArray and I have the following value for arr ", arr);
     //This function will run the get function in all of the cities of the array it receives as a parameter
 
     removeCurrentCards();
@@ -155,11 +156,11 @@ const createCard = (city, temperature, icon, description, error) => {
 // ---------------------------------------- THE CODE WILL START RUNNING FROM HERE ----------------------------------------//
 
 
-buttonEl = document.querySelector("#searchBtn");
-buttonEl.addEventListener("click", filterCities);
+searchEl = document.querySelector("#searchBtn");
+searchEl.addEventListener("click", filterCities);
 
-buttonEl = document.querySelector("#showAllBtn");
-buttonEl.addEventListener("click", renderArray.bind(cities));
+showAllEl = document.querySelector("#showAllBtn");
+showAllEl.addEventListener("click", () => {renderArray(cities)});
 
-renderArray(cities);
+renderArray(cities); 
 
